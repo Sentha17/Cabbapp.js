@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Booking</title>
+</head>
+<center/>
+<body>
+<h4><center>Cab Booking</h4>
+<form action onsubmit="display()"></form>
+<form>
+	<label> Journey Date</label>
+	<input type="date" name="jounerney date" min="2021-04-21" max="2021-04-26" required/>
+	<br/>
+	<br/>
+	<label> Timings</label>	
+	<input type="time" name="pickuptime" required/>
+	<br/><br/>
+	<label> Senior Citizen</label>
+	<input type="checkbox" name="seniorcitizen" value="Y" onchange=senior()> Senior Citizen
+	<br/><br/>
+	<label> Gender </label>
+	<input type="radio" name="male" value="m"> Male
+	<input type="radio" name="female" value="f">Female
+    <br/><br/>
+     <button type="submit" onclick="display()">Submit</button>
+    <button type="reset">Reset</button>
+    <h2>Instructions</h2>
+	    <li>Should wear mask</li>
+	    <li>Keep hand sanitizer</li>
+	    
+	
+</form>
+<script>
+    function senior()
+    {
+        event.preventDefault();
+        alert("Senior Citizen");
+    }
+    function display()
+    {
+        alert("----Ticket Booked Successfully----")
+        alert("----Have a HAPPY JOURNEY----")
+    }
+</script>
+</body>
+</html>

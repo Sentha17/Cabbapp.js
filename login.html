@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>LOGIN</title>
+</head>
+<body>
+<h1> <center> Login Page</h1>
+<form action onsubmit="login()">
+<br/>
+	<center>
+	<label for="number"> Enter the Mobile Number</label>
+	<input type="number" name="mobileNumber" id="mobileNumber" placeholder="Enter Mobile Number"required><br/>
+	<br/>
+	<label for="password"> Enter the password</label>
+	<input type="password" name="password" id="password" placeholder="Enter Password"required autofocus><br/>
+	<br/>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    </center>
+</form>
+<script>
+    function login()
+    {
+        event.preventDefault();
+        alert("Login button clicked");
+        let mobilenumber=document.querySelector("#mobileNumber").value;
+        //alert("Mobile Number:"+mobilenumber);
+        let password=document.querySelector("#password").value;
+        //alert("Password: "+password);
+        if(mobilenumber.length ==10 && password.length!=0 && password.length>=8 )
+        {
+            alert("Login Successfully");
+            window.location.href="cabtypes.html";
+        }
+        else
+        {
+            alert("Invalid login credentials");
+        }
+        
+    }
+    /*function hello()
+    {
+        alert("Hello");
+    }*/
+</script>
+</body>
+</html>
